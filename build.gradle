@@ -40,11 +40,11 @@ buildscript {
     }
 }
 
-//configurations.all {
-//    resolutionStrategy {
-//        force "io.cucumber:cucumber-core:4.2.0"
-//    }
-//}
+configurations.all {
+    resolutionStrategy {
+        force "io.cucumber:cucumber-core:4.2.0"
+    }
+}
 
 dependencies {
 
@@ -57,7 +57,7 @@ dependencies {
 
     // Use JUnit test framework
     testCompile("junit:junit:4.12")
-    testCompile("io.cucumber:cucumber-core:4.2.0")
+    
     compile("org.aspectj:aspectjrt:1.7.4")
     // https://mvnrepository.com/artifact/org.springframework/spring-webmvc
 	compile group: 'org.springframework', name: 'spring-webmvc', version: '5.1.5.RELEASE'
@@ -85,33 +85,20 @@ dependencies {
     // https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api
 	compile group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
 	
-	// https://mvnrepository.com/artifact/net.serenity-bdd/serenity-core
-	testCompile group: 'net.serenity-bdd', name: 'serenity-core', version: '2.0.48'
-		
-	// https://mvnrepository.com/artifact/net.serenity-bdd/serenity-junit
-	//testCompile group: 'net.serenity-bdd', name: 'serenity-junit', version: '2.0.48'
-	
-	// https://mvnrepository.com/artifact/net.serenity-bdd/serenity-cucumber
-	testCompile group: 'net.serenity-bdd', name: 'serenity-cucumber', version: '1.9.37'
-	
-	
-	// https://mvnrepository.com/artifact/io.cucumber/cucumber-java
-	//testCompile group: 'io.cucumber', name: 'cucumber-java', version: '4.3.0'
-	
-	// https://mvnrepository.com/artifact/io.cucumber/cucumber-junit
-	testCompile group: 'io.cucumber', name: 'cucumber-junit', version: '4.3.0'
 	
 	// https://mvnrepository.com/artifact/net.serenity-bdd/serenity-rest-assured
 	testCompile group: 'net.serenity-bdd', name: 'serenity-rest-assured', version: '2.0.48'
 	
-	// https://mvnrepository.com/artifact/io.cucumber/cucumber-jvm
-	//testCompile group: 'io.cucumber', name: 'cucumber-jvm', version: '4.3.0'
 	
-	
+	// https://mvnrepository.com/artifact/io.rest-assured/rest-assured
+	testCompile group: 'io.rest-assured', name: 'rest-assured', version: '3.3.0'
 	
 	// https://mvnrepository.com/artifact/org.json/json
 	testCompile group: 'org.json', name: 'json', version: '20180813'
 	
-	
+	testCompile "net.serenity-bdd:serenity-core:2.0.39",
+                "net.serenity-bdd:serenity-cucumber4:1.0.5",
+                "io.cucumber:cucumber-core:4.2.0",
+                "io.cucumber:cucumber-junit:4.2.0"
 	    
 }
